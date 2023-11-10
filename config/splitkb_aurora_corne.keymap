@@ -21,17 +21,7 @@
     };
 
     combos {
-        compatible = "zmk,combos";
-
-        num5 {
-            bindings = <&kt N5>;
-            key-positions = <17 5>;
-        };
-
-        num4 {
-            bindings = <&kt N4>;
-            key-positions = <16 4>;
-        };
+        #include "combos.dtsi"
     };
 
     keymap {
