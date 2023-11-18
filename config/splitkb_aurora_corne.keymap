@@ -18,6 +18,7 @@
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
         };
+    }
 
     combos {
         #include "combos.dtsi"
