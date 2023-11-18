@@ -6,8 +6,7 @@
   │ 24  25  26  27  28  29│ │ 30  31  32  33  34  35│
   ╰───────────╮ 36  37  38│ │ 39  40  41╭───────────╯
               ╰───────────╯ ╰───────────╯            */
-#undef COMBO_HOOK
-#define COMBO_HOOK global-quick-tap-ms = <100>;
+
 #define COMBO_TERM_FAST 20
 #define COMBO_TERM_SLOW 35
 
