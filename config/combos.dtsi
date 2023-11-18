@@ -6,70 +6,22 @@
   │ 24  25  26  27  28  29│ │ 30  31  32  33  34  35│
   ╰───────────╮ 36  37  38│ │ 39  40  41╭───────────╯
               ╰───────────╯ ╰───────────╯            */
-compatible = "zmk,combos";
+#undef COMBO_HOOK
+#define COMBO_HOOK global-quick-tap-ms = <100>;
+#define COMBO_TERM_FAST 20
+#define COMBO_TERM_SLOW 35
 
-num1 {
-    key-positions = <13 1>;
-    bindings = <&kt N1>;
-    layers = <0>;
-};
+ZMK_COMBO(num1, &kp N1, 13 1,  DEF, COMBO_TERM_FAST)
+ZMK_COMBO(num2, &kp N2, 14 2,  DEF, COMBO_TERM_FAST)
+ZMK_COMBO(num3, &kp N3, 15 3,  DEF, COMBO_TERM_FAST)
+ZMK_COMBO(num4, &kp N4, 16 4,  DEF, COMBO_TERM_FAST)
+ZMK_COMBO(num5, &kp N5, 17 5,  DEF, COMBO_TERM_FAST)
+ZMK_COMBO(num6, &kp N6, 18 6,  DEF, COMBO_TERM_FAST)
+ZMK_COMBO(num7, &kp N7, 19 7,  DEF, COMBO_TERM_FAST)
+ZMK_COMBO(num8, &kp N8, 20 8,  DEF, COMBO_TERM_FAST)
+ZMK_COMBO(num9, &kp N9, 21 9,  DEF, COMBO_TERM_FAST)
+ZMK_COMBO(num0, &kp N0, 22 10, DEF, COMBO_TERM_FAST)
 
-num2 {
-    key-positions = <14 2>;
-    bindings = <&kt N2>;
-    layers = <0>;
-};
+ZMK_COMBO(esc, &kp ESC, 15 16, DEF, COMBO_TERM_FAST)
+ZMK_COMBO(ret, &kp RET, 19 20, DEF, COMBO_TERM_FAST)
 
-num3 {
-    key-positions = <15 3>;
-    bindings = <&kt N3>;
-    layers = <0>;
-};
-
-num4 {
-    key-positions = <16 4>;
-    bindings = <&kt N4>;
-    layers = <0>;
-};
-
-num5 {
-    key-positions = <17 5>;
-    bindings = <&kt N5>;
-    layers = <0>;
-};
-
-num6 {
-    key-positions = <18 6>;
-    bindings = <&kt N6>;
-    layers = <0>;
-};
-
-num7 {
-    key-positions = <19 7>;
-    bindings = <&kt N7>;
-    layers = <0>;
-};
-
-num8 {
-    key-positions = <20 8>;
-    bindings = <&kt N8>;
-    layers = <0>;
-};
-
-num9 {
-    key-positions = <21 9>;
-    bindings = <&kt N9>;
-    layers = <0>;
-};
-
-num0 {
-    key-positions = <22 10>;
-    bindings = <&kt N0>;
-    layers = <0>;
-};
-
-c_esc {
-    key-positions = <15 16>;
-    bindings = <&kt ESC>;
-    layers = <0>;
-};
