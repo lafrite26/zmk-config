@@ -66,7 +66,7 @@
 
             bindings = <
 &kp GRAVE     &kp N1      &kp N2      &kp N3      &kp N4      &kp N5       &none      &none      &none     &none     &none  &bt BT_SEL 3
-&none        &kp BSLH      &kp LBRC    &kp LBKT   &kp RBKT    &kp RBRC     &none      &kp RSHFT  &kp RCTRL  &kp RALT  &kp RGUI &bt BT_SEL 4
+&none        &kp RA(N8)   &kp RA(N4)  &kp RA(N5)  &kp RA(MINUS) &kp RA(EQUAL) &none      &kp RSHFT  &kp RCTRL  &kp RALT  &kp RGUI &bt BT_SEL 4
 &kp F1        &kp F2      &kp F3      &kp F4      &kp F5      &kp F6       &none      &none      &none     &none     &none  &bt BT_SEL 5
                                     &to SHEET_    &none       &none        &none      &none      &trans
             >;
