@@ -6,6 +6,8 @@
 #define RIGHT_   1
 #define LEFT_    2
 #define SHEET_   3
+#define SYM_    4
+
 
 / {
     behaviors {
@@ -38,7 +40,8 @@
 &kp LBKT  &kp Q       &kp W       &kp E           &kp R        &kp T      &kp Y     &kp U        &kp I          &kp O       &kp P          &kp RBKT
 &kp BSLH  &hm LGUI A  &hm RALT S  &hm LCTRL D     &hm LSHFT F  &kp G      &kp H     &hm RSHFT J  &hm RCTRL K    &hm RALT L  &hm RGUI SEMI  &kp SQT
 &kp NUBS   &kp Z       &kp X       &kp C           &kp V        &kp B      &kp N     &kp M        &kp COMMA      &kp DOT     &kp FSLH       &kp EQUAL
-                                  &lt RIGHT_ TAB  &kp RET      &kp ESC    &kp BSPC  &kp SPACE    &lt LEFT_ TAB
+                                  &lt RIGHT_ TAB  &lt SYM_ RET      &kp ESC    &kp BSPC  &lt SYM_ SPACE    &lt LEFT_ TAB
+
             >;
         };
 
@@ -86,5 +89,75 @@
                                     &kp KP_N0  &kp KP_DOT  &kp RET            &kp BSPC  &kp SPACE  &tog SHEET_
             >;
         };
+        sheet_layer {
+            // -----------------------------------------------------------------------------------------
+            // | BSPC  |  + |  7  |  8  |  9  |  -  |   |     |     |     |     |     |      |
+            // |  DEL  |  ( |  4  |  5  |  6  |  *  |   | LFT | DWN |  UP | RGT |     |      |
+            // | NLoc  |  ) |  1  |  2  |  3  |  /  |   |     |     |     |     |     |      |
+            //                    |  0  |  .  | ENT |   | BSPC | SPACE | Tog SHEET_ |
+
+            bindings = <
+&kp BSPC    &kp KP_PLUS  &kp KP_N7  &kp KP_N8  &kp KP_N9   &kp KP_MINUS       &none     &none      &none        &none      &none  &kp C_SLEEP
+&kp DEL     &kp KP_LPAR  &kp KP_N4  &kp KP_N5  &kp KP_N6   &kp KP_MULTIPLY    &kp LEFT  &kp DOWN   &kp UP       &kp RIGHT  &none  &none
+&kp KP_NUM  &kp KP_RPAR  &kp KP_N1  &kp KP_N2  &kp KP_N3   &kp KP_DIVIDE      &none     &none      &none        &none      &none  &none
+                                    &kp KP_N0  &kp KP_DOT  &kp RET            &kp BSPC  &kp SPACE  &tog SHEET_
+            >;
+        };
+
+        sym_layer {
+            // -----------------------------------------------------------------------------------------
+            // | |  ^ |  <  |  >  |  $  |  %  |    |  @  |  &  |  *  |  '  |  `  |  |
+            // | |  { |  (  |  )  |  }  |  =  |    |  \  |  +  |  -  |  /  |  "  |  |
+            // | |  ~ |  [  |  ]  |  _  |  #  |    |  |  |  !  |  ;  |  :  |  ?  |  |
+            //              |     |     |     |    |     |     |     |
+
+            bindings = <
+                &none
+                /\* ^ \*/       &kp LSHFT(N6)        /\* Shift+6 -> ^ on AZERTY \*/
+                /\* < \*/       &kp NUBS             /\* NUBS (<) \*/
+                /\* > \*/       &kp LSHFT(NUBS)      /\* Shift+NUBS -> > \*/
+                /\* $ \*/       &kp RALT(4)          /\* AltGr+4 -> $ \*/
+                /\* % \*/       &kp LSHFT(N5)        /\* Shift+5 -> % \*/
+                &none
+                /\* @ \*/       &kp RALT(0)          /\* AltGr+0 -> @ \*/
+                /\* & \*/       &kp LSHFT(N6)        /\* Shift+6 often -> & (if 6 is &) \*/
+                /\* \* \*/       &kp LSHFT(N8)        /\* Shift+8 -> \* \*/
+                /\* ' \*/       &kp N4               /\* ' is on 4 without modifier on some AZERTY — adjust if needed \*/
+                /\* \` \*/       &kp GRAVE            /\* backtick \*/
+                &none
+
+                &none
+                /\* { \*/       &kp LSHFT(LBKT)      /\* Shift+[ -> { \*/
+                /\* ( \*/       &kp LSHFT(N5)        /\* Shift+5 -> ( on AZERTY? adjust if variant \*/
+                /\* ) \*/       &kp LSHFT(N6)        /\* Shift+6 -> )  (adjust if needed) \*/
+                /\* } \*/       &kp LSHFT(RBKT)      /\* Shift+] -> } \*/
+                /\* = \*/       &kp EQUAL            /\* = \*/
+                /\* \*/         &kp EQUAL            /\* duplicate in your map — kept as = \*/
+                /\* \\ \*/       &kp RALT(N8)         /\* AltGr+8 -> \\ \*/
+                /\* + \*/       &kp LSHFT(EQUAL)     /\* Shift+= -> + \*/
+                /\* - \*/       &kp MINUS            /\* - \*/
+                /\* / \*/       &kp N8               /\* / often on 8 without modifier on AZERTY — adjust if needed \*/
+                /\* " \*/       &kp LSHFT(N3)        /\* Shift+3 -> " \*/
+                &none
+
+                &none
+                /\* ~ \*/       &kp RALT(2)          /\* AltGr+2 -> ~ \*/
+                /\* [ \*/       &kp LBKT             /\* [ \*/
+                /\* ] \*/       &kp RBKT             /\* ] \*/
+                /\* \_ \*/       &kp LSHFT(MINUS)     /\* Shift+- -> \_ \*/
+                /\* # \*/       &kp LSHFT(N3)        /\* Shift+3 -> # on some variants (adjust) \*/
+                &none
+                /\* | \*/       &kp RALT(N1)         /\* AltGr+1 -> | \*/
+                /\* ! \*/       &kp LSHFT(N1)        /\* Shift+1 -> ! \*/
+                /\* ; \*/       &kp N5               /\* ; on AZERTY often on 5 or key with shift — adjust \*/
+                /\* : \*/       &kp LSHFT(N7)        /\* Shift+7 -> : \*/
+                /\* ? \*/       &kp LSHFT(N0)        /\* Shift+0 -> ? \*/
+                &none
+
+                /\* thumb cluster (placeholders) \*/
+                &none &none &none &none &none &none
+            >
+        };
+
     };
 };
