@@ -156,7 +156,7 @@
 
                 /\* thumb cluster (placeholders) \*/
                 &none &none &none &none &none &none
-            >
+            >;
         };
 
     };
