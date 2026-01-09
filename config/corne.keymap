@@ -98,10 +98,12 @@
             //              |     |     |     |    |     |     |     |
 
             bindings = <
-&none  &kp LSHFT(N6)    &kp NUBS         &kp LSHFT(NUBS)  &kp RALT(N4)     &kp LSHFT(N5)     &kp RALT(N0)   &kp LSHFT(N6)    &kp LSHFT(N8)     &kp N4           &kp GRAVE         &none
-&none  &kp LSHFT(LBKT)  &kp LSHFT(N5)    &kp LSHFT(N6)    &kp LSHFT(RBKT)  &kp EQUAL         &kp RALT(N8)   &kp LSHFT(EQUAL) &kp MINUS         &kp N8           &kp LSHFT(N3)     &none
-&none  &kp RALT(N2)     &kp LBKT         &kp RBKT         &kp LSHFT(MINUS) &kp LSHFT(N3)     &kp RALT(N1)   &kp LSHFT(N1)    &kp N5            &kp LSHFT(N7)    &kp LSHFT(N0)     &none
-                                         &none            &none            &none             &none          &none            &none
+&none       &kp LS(N6)      &kp NUBS        &kp LS(NUBS)    &kp RA(N4)      &kp LS(N5)          &kp RA(N0)      &kp LS(N6)      &kp LS(N8)      &kp N4          &kp GRAVE       &none
+&none       &kp LS(LBKT)    &kp LS(N5)      &kp LS(N6)      &kp LS(RBKT)    &kp EQUAL           &kp RA(N8)      &kp LS(EQUAL)   &kp MINUS       &kp N8          &kp LS(N3)      &none
+&none       &kp RA(N2)      &kp LBKT        &kp RBKT        &kp LS(MINUS)   &kp LS(N3)          &kp RA(N1)      &kp LS(N1)      &kp N5          &kp LS(N7)      &kp LS(N0)      &none
+                                            &none           &none           &none               &none           &none           &none
+            >;
+        };
             >;
         };
 
