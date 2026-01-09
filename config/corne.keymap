@@ -90,57 +90,57 @@
             >;
         };
 
-        sym_layer {
+sym_layer {
             // -----------------------------------------------------------------------------------------
             // | |  ^ |  <  |  >  |  $  |  %  |    |  @  |  &  |  *  |  '  |  `  |  |
             // | |  { |  (  |  )  |  }  |  =  |    |  \  |  +  |  -  |  /  |  "  |  |
             // | |  ~ |  [  |  ]  |  _  |  #  |    |  |  |  !  |  ;  |  :  |  ?  |  |
             //              |     |     |     |    |     |     |     |
 
-            bindings = <
+            bindings = 
                 &none
-                /\* ^ \*/       &kp LSHFT(N6)        /\* Shift+6 -> ^ on AZERTY \*/
-                /\* < \*/       &kp NUBS             /\* NUBS (<) \*/
-                /\* > \*/       &kp LSHFT(NUBS)      /\* Shift+NUBS -> > \*/
-                /\* $ \*/       &kp RALT(4)          /\* AltGr+4 -> $ \*/
-                /\* % \*/       &kp LSHFT(N5)        /\* Shift+5 -> % \*/
+                /* ^ */       &kp LSHFT(N6)        /* Shift+6 -> ^ on AZERTY */
+                /* < */       &kp NUBS             /* NUBS (<) */
+                /* > */       &kp LSHFT(NUBS)      /* Shift+NUBS -> > */
+                /* $ */       &kp RALT(N4)         /* AltGr+4 -> $ */
+                /* % */       &kp LSHFT(N5)        /* Shift+5 -> % */
                 &none
-                /\* @ \*/       &kp RALT(0)          /\* AltGr+0 -> @ \*/
-                /\* & \*/       &kp LSHFT(N6)        /\* Shift+6 often -> & (if 6 is &) \*/
-                /\* \* \*/       &kp LSHFT(N8)        /\* Shift+8 -> \* \*/
-                /\* ' \*/       &kp N4               /\* ' is on 4 without modifier on some AZERTY — adjust if needed \*/
-                /\* \` \*/       &kp GRAVE            /\* backtick \*/
-                &none
-
-                &none
-                /\* { \*/       &kp LSHFT(LBKT)      /\* Shift+[ -> { \*/
-                /\* ( \*/       &kp LSHFT(N5)        /\* Shift+5 -> ( on AZERTY? adjust if variant \*/
-                /\* ) \*/       &kp LSHFT(N6)        /\* Shift+6 -> )  (adjust if needed) \*/
-                /\* } \*/       &kp LSHFT(RBKT)      /\* Shift+] -> } \*/
-                /\* = \*/       &kp EQUAL            /\* = \*/
-                /\* \*/         &kp EQUAL            /\* duplicate in your map — kept as = \*/
-                /\* \\ \*/       &kp RALT(N8)         /\* AltGr+8 -> \\ \*/
-                /\* + \*/       &kp LSHFT(EQUAL)     /\* Shift+= -> + \*/
-                /\* - \*/       &kp MINUS            /\* - \*/
-                /\* / \*/       &kp N8               /\* / often on 8 without modifier on AZERTY — adjust if needed \*/
-                /\* " \*/       &kp LSHFT(N3)        /\* Shift+3 -> " \*/
+                /* @ */       &kp RALT(N0)         /* AltGr+0 -> @ */
+                /* & */       &kp LSHFT(N6)        /* Shift+6 often -> & (if 6 is &) */
+                /* * */       &kp LSHFT(N8)        /* Shift+8 -> * */
+                /* ' */       &kp N4               /* ' is on 4 without modifier on some AZERTY — adjust if needed */
+                /* ` */       &kp GRAVE            /* backtick */
                 &none
 
                 &none
-                /\* ~ \*/       &kp RALT(2)          /\* AltGr+2 -> ~ \*/
-                /\* [ \*/       &kp LBKT             /\* [ \*/
-                /\* ] \*/       &kp RBKT             /\* ] \*/
-                /\* \_ \*/       &kp LSHFT(MINUS)     /\* Shift+- -> \_ \*/
-                /\* # \*/       &kp LSHFT(N3)        /\* Shift+3 -> # on some variants (adjust) \*/
-                &none
-                /\* | \*/       &kp RALT(N1)         /\* AltGr+1 -> | \*/
-                /\* ! \*/       &kp LSHFT(N1)        /\* Shift+1 -> ! \*/
-                /\* ; \*/       &kp N5               /\* ; on AZERTY often on 5 or key with shift — adjust \*/
-                /\* : \*/       &kp LSHFT(N7)        /\* Shift+7 -> : \*/
-                /\* ? \*/       &kp LSHFT(N0)        /\* Shift+0 -> ? \*/
+                /* { */       &kp LSHFT(LBKT)      /* Shift+[ -> { */
+                /* ( */       &kp LSHFT(N5)        /* Shift+5 -> ( on AZERTY? adjust if variant */
+                /* ) */       &kp LSHFT(N6)        /* Shift+6 -> )  (adjust if needed) */
+                /* } */       &kp LSHFT(RBKT)      /* Shift+] -> } */
+                /* = */       &kp EQUAL            /* = */
+                /* \ */       &kp EQUAL            /* duplicate in your map — kept as = */
+                /* \ */       &kp RALT(N8)         /* AltGr+8 -> \ */
+                /* + */       &kp LSHFT(EQUAL)     /* Shift+= -> + */
+                /* - */       &kp MINUS            /* - */
+                /* / */       &kp N8               /* / often on 8 without modifier on AZERTY — adjust if needed */
+                /* " */       &kp LSHFT(N3)        /* Shift+3 -> " */
                 &none
 
-                /\* thumb cluster (placeholders) \*/
+                &none
+                /* ~ */       &kp RALT(N2)         /* AltGr+2 -> ~ */
+                /* [ */       &kp LBKT             /* [ */
+                /* ] */       &kp RBKT             /* ] */
+                /* _ */       &kp LSHFT(MINUS)     /* Shift+- -> _ */
+                /* # */       &kp LSHFT(N3)        /* Shift+3 -> # on some variants (adjust) */
+                &none
+                /* | */       &kp RALT(N1)         /* AltGr+1 -> | */
+                /* ! */       &kp LSHFT(N1)        /* Shift+1 -> ! */
+                /* ; */       &kp N5               /* ; on AZERTY often on 5 or key with shift — adjust */
+                /* : */       &kp LSHFT(N7)        /* Shift+7 -> : */
+                /* ? */       &kp LSHFT(N0)        /* Shift+0 -> ? */
+                &none
+
+                /* thumb cluster (placeholders) */
                 &none &none &none &none &none &none
             >;
         };
