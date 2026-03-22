@@ -8,7 +8,6 @@
 #define SHEET_   3
 #define SYM_    4
 
-
 / {
     behaviors {
         hm: homerow_mods {
@@ -16,7 +15,7 @@
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            quick-tap-ms = <150>;
+            quick-tap-ms = <0>;
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
         };
@@ -41,16 +40,15 @@
 &kp BSLH  &hm LGUI A  &hm RALT S  &hm LCTRL D     &hm LSHFT F  &kp G      &kp H     &hm RSHFT J  &hm RCTRL K    &hm RALT L  &hm RGUI SEMI  &kp SQT
 &kp NUBS   &kp Z       &kp X       &kp C           &kp V        &kp B      &kp N     &kp M        &kp COMMA      &kp DOT     &kp FSLH       &kp EQUAL
                                   &lt RIGHT_ TAB  &lt SYM_ RET      &kp ESC    &kp BSPC  &lt SYM_ SPACE    &lt LEFT_ TAB
-
             >;
         };
 
         right_layer {
             // -----------------------------------------------------------------------------------------
-            // | BTCLR |     |  mute | vold | volu | printS  | |  6    |  7  |  8  |  9   |  0   | -    |
-            // | BT1  | LGUI | RALT | LCTRL | LSHFT |        | |  LFT  | DWN |  UP | RGT  |      |      |
-            // | BT2  |     |     |     |     |     |        | |  F7   | F8  |  F9 | F10  |  F11 | F12  |
-            //                             |     |     |     | | DEL | SPACE | tog SHEET_ |
+            // | BTCLR |     |  mute | vold | volu | printS  |    |  6    |  7  |  8  |  9   |  0   | -    |
+            // | BT1  | LGUI | RALT | LCTRL | LSHFT |        |    |  LFT  | DWN |  UP | RGT  |      |      |
+            // | BT2  |     |     |     |     |     |        |    |  F7   | F8  |  F9 | F10  |  F11 | F12  |
+            //                             |     |     |     |    | DEL | SPACE | tog SHEET_ |
 
             bindings = <
 &bt BT_CLR    &trans    &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp PSCRN    &kp N6    &kp N7     &kp N8       &kp N9     &kp N0   &kp MINUS
@@ -62,16 +60,16 @@
 
         left_layer {
             // -----------------------------------------------------------------------------------------
-            // |  GRAVE |  1  |  2  |  3  |  4  |  5  | |     |         |         |        |        | BT3  |
-            // |        | \   | {   | [   | ]   | }   | |     | RSHFT   |  RCTRL  | RALT   |  RGUI  | BT4  |
-            // |  F1    |  F2 | F3  |  F4 | F5  | F6  | |     |         |         |        |        | BT5  |
-            //                    | tog SHEET_  |     | |     |         |         |        |
+            // |  GRAVE |  1  |  2  |  3  |  4  |  5  |     |    |         |         |        |        | BT3  |
+            // |  \     | {   | [   | ]   | }   |     |    | RSHFT   |  RCTRL  | RALT   |  RGUI  | BT4  |
+            // |  F1    |  F2 | F3  |  F4 | F5  | F6  |     |    |         |         |        |        | BT5  |
+            //                      | tog SHEET_  |     |     |    |         |         |        |
 
             bindings = <
-&kp GRAVE     &kp N1      &kp N2      &kp N3      &kp N4      &kp N5       &none      &none      &none     &none     &none  &bt BT_SEL 3
-&none        &kp RA(N8)   &kp RA(N4)  &kp RA(N5)  &kp RA(MINUS) &kp RA(EQUAL) &none      &kp RSHFT  &kp RCTRL  &kp RALT  &kp RGUI &bt BT_SEL 4
-&kp F1        &kp F2      &kp F3      &kp F4      &kp F5      &kp F6       &none      &none      &none     &none     &none  &bt BT_SEL 5
-                                    &to SHEET_    &none       &none        &none      &none      &trans
+&kp GRAVE     &kp N1      &kp N2      &kp N3      &kp N4         &kp N5           &none      &none      &none     &none     &none  &bt BT_SEL 3
+&kp LA(N6)  &kp LA(N8)  &kp LA(N4)  &kp LA(N5)  &kp LA(MINUS)  &kp LA(EQUAL)    &kp RSHFT  &kp RCTRL  &kp RALT  &kp RGUI  &none  &bt BT_SEL 4
+&kp F1      &kp F2      &kp F3      &kp F4      &kp F5         &kp F6           &none      &none      &none     &none     &none  &bt BT_SEL 5
+                                    &to SHEET_  &none          &none            &none      &none      &trans
             >;
         };
 
@@ -98,11 +96,12 @@
             //              |     |     |     |    |     |     |     |
 
             bindings = <
-&none       &kp LS(N6)      &kp NUBS        &kp LS(NUBS)    &kp RA(N4)      &kp LS(N5)          &kp RA(N0)      &kp LS(N6)      &kp LS(N8)      &kp N4          &kp GRAVE       &none
-&none       &kp LS(LBKT)    &kp LS(N5)      &kp LS(N6)      &kp LS(RBKT)    &kp EQUAL           &kp RA(N8)      &kp LS(EQUAL)   &kp MINUS       &kp N8          &kp LS(N3)      &none
-&none       &kp RA(N2)      &kp LBKT        &kp RBKT        &kp LS(MINUS)   &kp LS(N3)          &kp RA(N1)      &kp LS(N1)      &kp N5          &kp LS(N7)      &kp LS(N0)      &none
-                                            &none           &none           &none               &none           &none           &none
+&none &kp LS(N6) &kp NUBS &kp LS(NUBS) &kp RA(N4) &kp LS(N5) &kp RA(N0) &kp LS(N7) &kp LS(N8) &kp N4 &kp GRAVE &none
+&none &kp LS(LBKT) &kp LS(N5) &kp LS(N6) &kp LS(RBKT) &kp EQUAL &kp RA(N8) &kp LS(EQUAL) &kp MINUS &kp N8 &kp LS(N3) &none
+&none &kp RA(N2) &kp LBKT &kp RBKT &kp LS(MINUS) &kp LS(N3) &kp RA(N1) &kp LS(N1) &kp N5 &kp LS(N7) &kp LS(N0) &none
+&none &none &none &none &none &none
             >;
         };
+
     };
 };
