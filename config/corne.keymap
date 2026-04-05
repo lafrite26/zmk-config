@@ -67,7 +67,7 @@
 
             bindings = <
 &kp GRAVE     &kp N1      &kp N2      &kp N3      &kp N4         &kp N5           &none      &none      &none     &none     &none  &bt BT_SEL 3
-&kp LA(N6)  &kp LA(N8)  &kp LA(N4)  &kp LA(N5)  &kp LA(MINUS)  &kp LA(EQUAL)    &kp RSHFT  &kp RCTRL  &kp RALT  &kp RGUI  &none  &bt BT_SEL 4
+&kp RA(N8)  &kp RA(N4)  &kp RA(N5)  &kp RA(MINUS)  &kp RA(EQUAL)  &none            &kp RSHFT  &kp RCTRL  &kp RALT  &kp RGUI  &none  &bt BT_SEL 4
 &kp F1      &kp F2      &kp F3      &kp F4      &kp F5         &kp F6           &none      &none      &none     &none     &none  &bt BT_SEL 5
                                     &to SHEET_  &none          &none            &none      &none      &trans
             >;
@@ -96,9 +96,9 @@
             //              |     |     |     |    |     |     |     |
 
             bindings = <
-&none &kp LS(N6) &kp NUBS &kp LS(NUBS) &kp RA(N4) &kp LS(N5) &kp RA(N0) &kp LS(N7) &kp LS(N8) &kp N4 &kp GRAVE &none
-&none &kp LS(LBKT) &kp LS(N5) &kp LS(N6) &kp LS(RBKT) &kp EQUAL &kp RA(N8) &kp LS(EQUAL) &kp MINUS &kp N8 &kp LS(N3) &none
-&none &kp RA(N2) &kp LBKT &kp RBKT &kp LS(MINUS) &kp LS(N3) &kp RA(N1) &kp LS(N1) &kp N5 &kp LS(N7) &kp LS(N0) &none
+&none  &kp RA(N9)  &kp NUBS    &kp LS(NUBS)   &kp RBKT       &kp LS(SQT)  &kp RA(N0)  &kp N1        &kp BSLH   &kp N4      &kp RA(N7)  &none
+&none  &kp RA(N4)  &kp N5      &kp MINUS      &kp RA(EQUAL)  &kp EQUAL    &kp RA(N8)  &kp LS(EQUAL) &kp N6     &kp LS(DOT) &kp N3      &none
+&none  &kp RA(N2)  &kp RA(N5)  &kp RA(MINUS)  &kp N8         &kp RA(N3)   &kp RA(N6)  &kp FSLH      &kp COMMA  &kp DOT     &kp LS(M)   &none
 &none &none &none &none &none &none
             >;
         };
